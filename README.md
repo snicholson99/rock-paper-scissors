@@ -4,4 +4,5 @@ A React boilerplate created using create-react-app. Includes SCSS build and watc
 ### Build Instructions
     git clone https://github.com/snicholson99/react-boilerplate  
     cd ./react-boilerplate  
+    npm i
     npm start    
