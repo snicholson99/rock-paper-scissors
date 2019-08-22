@@ -1,4 +1,103 @@
 .App {
-  min-height: 100vh;
-  width: 100%;
-  background-color: skyblue; }
+  height: 100vh;
+  width: 100%; }
+  .App .page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .App .page-start {
+      background: linear-gradient(45deg, slateblue, skyblue); }
+      .App .page-start h1 {
+        margin-bottom: 10px; }
+      .App .page-start button {
+        width: 80px !important; }
+      .App .page-start .tension-checkbox {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        font-weight: bold; }
+        .App .page-start .tension-checkbox input, .App .page-start .tension-checkbox label {
+          cursor: pointer; }
+      .App .page-start p {
+        margin-bottom: 10px;
+        text-align: center; }
+    .App .page-select {
+      background: linear-gradient(45deg, orange, white); }
+      .App .page-select div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 600px; }
+        .App .page-select div button i {
+          font-size: 20px;
+          padding-bottom: 10px; }
+    .App .page-loading {
+      animation: changeBackground 1.5s linear alternate-reverse infinite; }
+      .App .page-loading i {
+        animation: spinner 1.2s linear infinite;
+        font-size: 100px; }
+    .App .page-win {
+      background: linear-gradient(45deg, green, lightgreen); }
+      .App .page-win i {
+        font-size: 100px; }
+      .App .page-win div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 600px; }
+    .App .page-lose {
+      background: linear-gradient(45deg, red, orange); }
+      .App .page-lose i {
+        font-size: 100px; }
+      .App .page-lose div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 600px; }
+    .App .page-draw {
+      background: linear-gradient(45deg, orange, yellow); }
+      .App .page-draw i {
+        font-size: 100px; }
+      .App .page-draw div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 600px; }
+    .App .page button {
+      all: unset;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      padding: 15px 10px;
+      box-shadow: 3px 3px 0 0;
+      cursor: pointer;
+      border: none;
+      background-color: #fff;
+      font-size: 16px;
+      width: 110px;
+      font-weight: bold; }
+      .App .page button:hover {
+        transform: translate(3px, 3px);
+        box-shadow: none; }
+
+@keyframes changeBackground {
+  0% {
+    background-color: yellow; }
+  50% {
+    background-color: red; }
+  100% {
+    background-color: lightgreen; } }
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }

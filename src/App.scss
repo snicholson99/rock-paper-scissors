@@ -1,5 +1,114 @@
 .App {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
-  background-color: skyblue;
+  .page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &-start {
+      background: linear-gradient(45deg, slateblue, skyblue);
+      h1 { margin-bottom: 10px; }
+      button { width: 80px !important; }
+      .tension-checkbox {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        input, label { cursor: pointer; }
+      }
+      p {
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
+    &-select {
+      background: linear-gradient(45deg,orange, white);
+      div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 600px;
+        button {
+          i {
+            font-size: 20px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+    &-loading {
+      animation: changeBackground 1.5s linear alternate-reverse infinite;
+      i {
+        animation: spinner 1.2s linear infinite;
+        font-size: 100px;
+      }
+    }
+    &-win {
+      background: linear-gradient(45deg, green, lightgreen);
+      i { font-size: 100px; }
+      div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 600px;
+      }
+    }
+    &-lose {
+      background: linear-gradient(45deg, red, orange);
+      i { font-size: 100px; }
+      div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 600px;
+      }
+    }
+    &-draw {
+      background: linear-gradient(45deg, orange, yellow);
+      i { font-size: 100px; }
+      div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 600px;
+      }
+    }
+    button {
+      all: unset;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+      padding: 15px 10px;
+      box-shadow: 3px 3px 0 0;
+      cursor: pointer;
+      border: none;
+      background-color: #fff;
+      font-size: 16px;
+      width: 110px;
+      font-weight: bold;
+      &:hover {
+        transform: translate(3px, 3px);
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+@keyframes changeBackground {
+  0% { background-color: yellow; }
+  50% { background-color: red; }
+  100% { background-color: lightgreen; }
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
 }
